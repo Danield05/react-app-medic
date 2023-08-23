@@ -13,7 +13,7 @@ const AboutPage = () => {
           showStatus={false} // Oculta el estado del carrusel
           infiniteLoop={true} // Habilita el bucle infinito
           autoPlay={true} // Inicia la reproducción automática
-          interval={5000} // Cambia la imagen cada 5 segundos (ajusta según tus necesidades)
+          interval={4000} // Cambia la imagen cada 4 segundos (ajusta según tus necesidades)
         >
           <div>
             <img

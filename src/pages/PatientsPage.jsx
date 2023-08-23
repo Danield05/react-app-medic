@@ -1,7 +1,25 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import { Navbar } from "../components/Navbar";
 
 function PatientsPage() {
+
+  const [data, setData] = useState()
+
+ useEffect(() => {
+  const getAllPatients = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/patients')
+      const patients = await response.json()
+     console.log(patients)
+      setData(patients)
+    } catch (error) {
+      console.log("Esto es un error debido a la falla de la API",error)
+    }
+  }
+    getAllPatients()
+ }, [])
+
+
   return (
     <>
       <Navbar />
